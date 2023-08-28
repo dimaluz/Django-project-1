@@ -1,0 +1,92 @@
+https://dbdiagram.io/d/64d4c65702bd1c4a5e9022dc
+
+
+Table category_MPTT as C{
+	id int [pk, increment]
+	name varchar
+	slug slug
+	parent varchar
+	is_active boolean
+}
+
+Table ProductType as PT{
+	id int [pk, increment]
+	name varchar
+	is_active boolean
+}
+
+Table ProductSpecification as PS{
+	id int [pk, increment]
+	product_type int
+	name varchar
+}
+
+Ref: PT.id < PS.product_type
+
+Table Product as P{
+	id int [pk, increment]
+	product_type int
+	category int
+	description varchar
+	slug slug
+	regular_price decimal
+	descount_price decimal
+	is_active boolean
+	created_at timestamp
+	updated_at timestamp
+}
+
+Table ProductSpecificationValue as PSV{
+	id int [pk, increment]
+	product int
+	specification int
+	value varchar
+}
+
+Table ProductImage as PI{
+	id int [pk, increment]
+	product int
+	image image
+	alt_text varchar
+	is_feature boolean
+	created_at timestamp
+	updated_at timestamp
+}
+
+Ref: P.id < PI.product
+Ref: C.id < P.category
+Ref: PT.id < P.product_type
+Ref: P.id < PSV.product
+Ref: PSV.specification > PS.id
+
+
+
+Table Customer as CST{
+	id int [pk, increment]
+	email email
+	name varchar
+	mobile varchar
+	password password
+	is_active boolean
+	is_staff boolean
+	created_at timestamp
+	updated_at timestamp
+}
+
+Table Address as A{
+	id int [pk, increment]
+	customer varchar
+	count_region varchar
+	full_name varchar
+	phone varchar
+	postcode varchar
+	address_line varchar
+	address_line2 varchar
+	town_city varchar
+}
+
+Ref: A.customer > CST.id
+
+
+
+

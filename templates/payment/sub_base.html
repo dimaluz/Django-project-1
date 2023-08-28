@@ -1,0 +1,15 @@
+{% extends "../store/base.html" %}
+{% load static %}
+{% block stylesheet %}{% static 'payment/css/main.css' %}{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+	<div class="login d-flex align-items-center py-5">
+		<div class="col-12 col-md-4 col-lg-5 mx-auto">
+			{% block sub_content %}{% endblock %}
+		</div>
+	</div>
+</div>
+
+{% endblock %}

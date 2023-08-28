@@ -1,0 +1,92 @@
+@media (min-width: 1000px){
+	.container{
+		max-width: 1000px;
+	}
+}
+
+@media (max-width: 1200px){
+	.container{
+		max-width: 100%;
+		padding: 0 24px;
+	}
+}
+
+.dropdown-toggle::after{
+	display: none;
+}
+
+.dropdown-menu{
+	top:58px;
+	left: 0px;
+	padding: 10px;
+}
+
+.allert-primary{
+	background-color: #E4F1FF;
+}
+
+/* Font properties */
+
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+html, body, p, div{
+	letter-spacing: -0.02px;
+	font-family: 'Montserrat', sans-serif;
+}
+.fs12{
+	font-size: 12px;
+}
+
+.fs15{
+	font-size: 0.9375rem;
+}
+
+.fw300{
+	font-weight: 300;
+}
+
+.fw500{
+	font-weight: 500;
+}
+
+/* Navigation bar properties */
+.logo{
+	width: 49px;
+}
+
+@media (min-width: 768px){
+	.logo{
+		width: 49px;
+	}
+}
+
+@media (min-width: 992px){
+	.logo{
+		max-width: 60px;
+	}
+}
+
+/*@media (min-width: 1200px){
+	.container{
+		max-width: 70px;
+	}
+}*/
+
+/* Footer properties */
+
+.footer > div > div > ul > li{
+	padding-bottom: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

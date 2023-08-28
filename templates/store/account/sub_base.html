@@ -1,0 +1,15 @@
+{% extends "../base.html" %}
+{% load static %}
+{% block stylesheet %}{% static 'account/css/account.css' %}{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+	<div class="login d-flex align-items-center py-5">
+		<div class="col-12 col-md-7 col-lg-8 mx-auto">
+			{% block sub_content %}{% endblock %}
+		</div>
+	</div>
+</div>
+
+{% endblock %}

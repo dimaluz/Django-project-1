@@ -1,0 +1,70 @@
+{% extends "../sub_base.html" %}
+{% block title %}Edit Addresses{% endblock %}
+
+{% block sub_content %}
+
+<form name="address_form" class="account-form col-lg-8 mx-auto" action="." method="post">
+	<h1 class="h3">Create/Edit Address</h1>
+	<div>Add a new delivery <b>address</b> and delivery preferences</div>
+	<hr/>
+	{% csrf_token %}
+	{% if form.errors %}
+		<div class="alert alert-primary" role="alert">
+			Error: Please try again!
+		</div>
+	{% endif %}
+									
+	<label class="small fw-bold">{{ form.full_name.label }}</label>
+	{{ form.full_name }}
+									
+	<label class="small fw-bold">{{ form.phone.label }}</label>
+	{{ form.phone }}
+									
+	<label class="small fw-bold">{{ form.address_line.label }}</label>
+	{{ form.address_line }}
+									
+	<label class="small fw-bold">{{ form.address_line2.label }}</label>
+	{{ form.address_line2 }}
+
+	<label class="small fw-bold">{{ form.town_city.label }}</label>
+	{{ form.town_city }}
+
+	<label class="small fw-bold">{{ form.postcode.label }}</label>
+	{{ form.postcode }}
+									
+	<button class="btn btn-primary btn-block py-2 mb-4 mt-5 fw500 w-100" type="success" onclick="submitForm()">Add Address</button>
+	
+</form>
+
+<script type="text/javascript">
+
+	function submitForm(){
+		var form = document.getElementsByName('address_form')[0];
+		form.submit();
+		form.reset();
+		return false;
+	}
+
+</script>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
