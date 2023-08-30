@@ -153,9 +153,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Stripe payment details
 #PUBLISHABLE_KEY
-os.environ.setdefault('STRIPE_PUBLISHABLE_KEY', 'pk_test_51NYt3xAPRx2Hg8fSKwYCToqukzsNIzpeKpjGt6plrKgd4rmvmSGXgi26nrMunITqtRgMxgOLVS1BFAMe1mIIij2X00sUmxg2Ka')
-STRIPE_SECRET_KEY = 'sk_test_51NYt3xAPRx2Hg8fSKVyF0SZKhpbuNXho3StGHCWpNzcHN36OFJAJUp67r067BfieEfpWYXIqd29lyJbYLUgPe5Pa00jkv1xbP9'
-STRIPE_ENDPOINT_SECRET = 'whsec_64196e3bde9fb1177dd5df344952b6905a92ba0306145cbf2f7eb66a57f3781c'
+os.environ.setdefault('STRIPE_PUBLISHABLE_KEY', 'pk_test_51NYt3x....')
+STRIPE_SECRET_KEY = 'sk_test_51NY....'
+STRIPE_ENDPOINT_SECRET = 'whsec_64196e3.....'
 # stripe listen --forward-to localhost:8000/payments/webhook/
 
 
